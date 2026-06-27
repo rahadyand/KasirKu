@@ -936,7 +936,7 @@ java Main
 
 **Hasil Ekspektasi**: 
 ```
-5 produk ditampilkan (P01-P05) dengan format tabel yang rapi
+30 produk ditampilkan (P01-P30) dengan format tabel yang rapi
 Setiap produk menampilkan: ID, Nama, Harga, dan Stok
 ```
 
