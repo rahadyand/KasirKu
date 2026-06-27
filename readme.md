@@ -1,24 +1,4 @@
-# Sistem Point of Sale (POS) CLI - Dokumentasi Akademis
-## Tugas Besar Mata Kuliah Struktur Data & Algoritma
-
-**Nama Universitas**: Universitas Sebelas Maret (UNS) Surakarta  
-**Program Studi**: Ilmu Komputer  
-**Mata Kuliah**: Struktur Data & Algoritma  
-**Semester**: Ganjil Tahun Akademik 2024/2025  
-**Tanggal Penyusunan**: Juni 2026  
-
----
-
-## Daftar Isi
-
-1. [I. Pendahuluan](#i-pendahuluan)
-2. [II. Deskripsi Program](#ii-deskripsi-program)
-3. [III. Penjelasan Fitur-Fitur Utama Program](#iii-penjelasan-fitur-fitur-utama-program)
-4. [IV. Struktur Data dan Algoritma yang Digunakan](#iv-struktur-data-dan-algoritma-yang-digunakan)
-5. [V. Panduan Instalasi dan Menjalankan Program](#v-panduan-instalasi-dan-menjalankan-program)
-6. [VI. Penggunaan Library Eksternal (Jika Ada)](#vi-penggunaan-library-eksternal-jika-ada)
-7. [VII. Hasil Testing dan Analisis Kompleksitas](#vii-hasil-testing-dan-analisis-kompleksitas)
-
+# Sistem Point of Sale (POS) CLI
 ---
 
 ## I. Judul dan Deskripsi Singkat Proyek
