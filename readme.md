@@ -7,7 +7,7 @@
 KasirKu - Point of Sale System
 
 ### Tujuan Program
-Sistem POS CLI adalah aplikasi berbasis terminal yang mensimulasikan operasional kasir di toko retail (toko buku). Program ini mengelola keseluruhan transaksi penjualan dari awal (pelanggan memilih barang) hingga akhir (pembayaran selesai).
+KasirKu adalah aplikasi berbasis terminal yang mensimulasikan operasional kasir di toko retail (toko buku). Program ini mengelola keseluruhan transaksi penjualan dari awal (pelanggan memilih barang) hingga akhir (pembayaran selesai).
 
 ### Fitur Utama (High-Level Overview)
 
