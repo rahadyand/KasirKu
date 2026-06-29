@@ -2,8 +2,7 @@ import java.util.*;
 
 /**
  * ============================================================================
- * TUGAS BESAR STRUKTUR DATA & ALGORITMA (SDA)
- * SISTEM POINT OF SALE (POS) CLI - JAVA MURNI (PURE JAVA)
+ * SISTEM POINT OF SALE (POS) CLI - KASIRKU
  * ============================================================================
  * 
  * Arsitektur Program (OOP & Struktur Data):
@@ -32,7 +31,7 @@ class Product {
         this.stok = stok;
     }
 
-    // Getter dan Setter
+    // Getter dan Setter - Mengambil dan mengubah atribut produk
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     public String getNama() { return nama; }
@@ -61,6 +60,7 @@ class CartItem {
         this.jumlahBeli = jumlahBeli;
     }
 
+    // Getter dan Setter - Mengambil dan mengubah atribut item keranjang
     public Product getProduct() { return product; }
     public void setProduct(Product product) { this.product = product; }
     public int getJumlahBeli() { return jumlahBeli; }
@@ -88,6 +88,7 @@ class Transaction {
 
     public Transaction(String transactionId, Stack<CartItem> cartStack) {
         this.transactionId = transactionId;
+        
         // Mengubah Stack menjadi List untuk menyimpan riwayat item transaksi secara berurutan
         this.items = new ArrayList<>(cartStack);
         this.totalHarga = 0;
@@ -108,7 +109,7 @@ class InventoryManager {
     private Map<String, Product> databaseBarang;
 
     public InventoryManager() {
-        // Inisialisasi menggunakan HashMap untuk pencarian instan
+        // Inisialisasi menggunakan HashMap untuk mengelola data barang dengan ID sebagai key dan Product sebagai value
         this.databaseBarang = new HashMap<>();
     }
 
@@ -123,17 +124,17 @@ class InventoryManager {
      * ANALISIS STRUKTUR DATA & KOMPLEKSITAS WAKTU: PENCARIAN BARANG
      * ========================================================================
      * - Mengapa Menggunakan HashMap?
-     *   HashMap menyimpan data dalam bentuk pasangan Key-Value (Kunci-Nilai). Dengan memetakan 
-     *   ID Barang (sebagai Key) ke objek Product (sebagai Value), kita dapat langsung melompat 
-     *   ke alamat memori barang tersebut melalui perhitungan kode hash (hash code) tanpa perlu 
-     *   melakukan iterasi pencarian linear dari awal hingga akhir (linear search).
+     *   HashMap menyimpan data dalam bentuk pasangan Key-Value. Dengan memetakan ID Barang 
+     *   (sebagai Key) ke objek Product (sebagai Value), kita dapat langsung melompat 
+     *   ke alamat memori barang tersebut melalui perhitungan hash code tanpa perlu 
+     *   melakukan iterasi pencarian linear dari awal hingga akhir.
      * 
      * - Kompleksitas Waktu (Time Complexity):
-     *   * Rata-rata (Average Case): O(1) / Constant Time. Waktu pencarian barang tidak dipengaruhi 
+     *   * Rata-rata (Average Case): O(1)/ Constant Time. Waktu pencarian barang tidak dipengaruhi 
      *     oleh jumlah total barang (N) yang ada di dalam database.
-     *   * Kasus Terburuk (Worst Case): O(N) / Linear Time. Terjadi hanya jika terjadi tabrakan 
-     *     hash (hash collision) yang ekstrem (semua key menunjuk pada bucket yang sama). Java 8+ 
-     *     mengoptimalkan worst-case ini menjadi O(log N) menggunakan struktur pohon merah-hitam.
+     *   * Kasus Terburuk (Worst Case): O(N) / Linear Time. Terjadi hanya jika terjadi hash collision 
+     *     yang ekstrem (semua key menunjuk pada bucket yang sama). Java 8+ mengoptimalkan
+     *     worst-case ini menjadi O(log N) menggunakan struktur Red Black Tree.
      */
     public Product cariBarang(String id) {
         return databaseBarang.get(id);
